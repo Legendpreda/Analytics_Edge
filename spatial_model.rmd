@@ -1,0 +1,30 @@
+---
+title: "Spatial Model Analysis"
+author: "Kent [Your Last Name]"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# Set up environment
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+# Load libraries
+library(tidyverse)   # for data manipulation
+library(sf)          # for spatial data handling (if needed)
+
+# Define file path (relative to project structure)
+
+data_path <- "data/data_center_inventory_sample_sep_2025_with_Balancing_Authorities.csv"
+
+# Read the CSV file
+
+data_spatial <- read_csv(data_path)
+
+# Display first few rows
+
+summary(data_spatial)
+```
+
+
+# Convert to Spatial Object
